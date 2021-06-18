@@ -1,0 +1,47 @@
+.cell {
+    width: 35px;
+    height: 35px;
+    outline: 1px solid rgb(0, 0, 0);
+    display: inline-block;
+}
+
+.end-cell {
+    background-image: url(../../logos/target_1.png);
+    background-size: contain;
+    border: 1px solid black;
+}
+
+.start-cell {
+    background-color: green;
+}
+
+.visited-cell {
+    animation-name: finalPath;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes finalPath {
+    100% {
+        background-color: rgba(255, 203, 5, 1)
+    }
+}
+
+.wall-cell {
+    outline: 1px solid rgb(0, 0, 0);
+    background-color: rgb(128,0,0);
+    /* background-color: rgb(139,69,19); */
+}
+
+.final-cell {
+    animation-name: shortestPath;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shortestPath {
+    100% {
+        transform: scale(1);
+        background-color: rgba(0, 230, 64, 1);
+    }
+}
