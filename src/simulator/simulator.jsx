@@ -121,7 +121,9 @@ fullWall() {
       }
     }
 }
-
+refreshPage(){
+    window.location.reload(false);
+}
 render() {
     const { grid, mouseIsPressed } = this.state;
 
@@ -141,7 +143,7 @@ render() {
           <Button className="topRow" variant="secondary" onClick={() => this.fullWall()} >
             Draw Path
           </Button>
-          <Button className="sidebar" href="root" variant="warning">
+          <Button className="sidebar" onClick={this.refreshPage} variant="warning">
             Reset
           </Button>
         </Navbar>
