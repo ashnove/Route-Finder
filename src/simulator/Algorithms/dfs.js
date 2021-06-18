@@ -27,6 +27,7 @@ export function getPath(end) {
     }
     return path;
 }
+
 function getChildren(node, grid) {
     const children = [];
     const {col, row} = node;
